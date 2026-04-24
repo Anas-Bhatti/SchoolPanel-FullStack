@@ -1,0 +1,58 @@
+# =================================================================
+# GLOBAL / SYSTEM
+# =================================================================
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+.history/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# =================================================================
+# BACKEND (.NET / Visual Studio)
+# =================================================================
+# Build outputs
+**/bin/
+**/obj/
+**/publish/
+
+# User-specific and Visual Studio files
+**/.vs/
+**/*.user
+**/*.suo
+**/*.userosscache
+**/*.sln.docstates
+**/Debug/
+**/Release/
+
+# Secrets & Config
+# Keep the main appsettings.json but ignore environment-specific secrets
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/secrets.json
+**/.env
+
+# =================================================================
+# FRONTEND (Angular / Node)
+# =================================================================
+**/node_modules/
+**/dist/
+**/.angular/
+**/tmp/
+**/out-tsc/
+**/bazel-out/
+
+# Testing and Coverage
+**/coverage/
+**/testem.log
+**/*.spec.ts.cache
+
+# =================================================================
+# TOOLS & MISC
+# =================================================================
+**/graphify-out/
+**/GEMINI.md

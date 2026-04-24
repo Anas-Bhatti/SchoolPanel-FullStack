@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>SchoolPanel.Api</RootNamespace>
+		<AssemblyName>SchoolPanel.Api</AssemblyName>
+		<Optimize>true</Optimize>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<AnalysisMode>Recommended</AnalysisMode>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- ASP.NET Core + Web -->
+		<PackageReference Include="Google.Apis.Auth" Version="1.73.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+
+		<!-- JWT / Identity -->
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.3.1" />
+		<PackageReference Include="Otp.NET" Version="1.4.1" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.3.1" />
+
+		<!-- Database — ADO.NET + Dapper (NO EF Core) -->
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+		<PackageReference Include="Dapper" Version="2.1.28" />
+
+		<!-- Password hashing -->
+		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+
+		<!-- Logging -->
+		<PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+		<PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
+		<PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+
+		<!-- Swagger -->
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+
+		<!-- Health Checks -->
+		<PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="8.0.0" />
+
+		<!-- Azure Blob Storage (Phase 3 upload support) -->
+		<PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
+
+		<!-- PDF Reports (Phase 4) -->
+		<PackageReference Include="QuestPDF" Version="2024.3.4" />
+
+		<!-- Excel Reports (Phase 4) -->
+		<PackageReference Include="ClosedXML" Version="0.102.1" />
+		<PackageReference Include="System.Management" Version="10.0.5" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" id="theme-color-meta" content="#2563EB" />
+  <meta name="description" content="SchoolPanel — School Management Dashboard" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>SchoolPanel</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"  href="assets/icons/favicon.svg" />
+  <link rel="manifest" href="assets/manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icons/favicon.svg" />
+
+  <!-- Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Google Identity Services (OAuth) — async so it never blocks render -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <!-- Inline: inject Google Client ID from build or server config -->
+  <script>
+    window.GOOGLE_CLIENT_ID = '';   // set at deploy time
+  </script>
+</head>
+<body class="mat-typography">
+
+  <!-- Accessibility: skip to main content -->
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+
+  <!-- Angular root -->
+  <sp-root>
+    <!-- Pre-bootstrap loading screen (replaced when Angular hydrates) -->
+    <div style="
+      position:fixed; inset:0;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center; gap:20px;
+      background:#0F172A;
+    " aria-label="Loading SchoolPanel" role="progressbar">
+
+      <!-- Logo mark -->
+      <div style="
+        width:52px; height:52px; border-radius:12px;
+        background:#2563EB;
+        display:flex; align-items:center; justify-content:center;
+      ">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+        </svg>
+      </div>
+
+      <!-- Spinner -->
+      <div style="
+        width:36px; height:36px;
+        border:3px solid rgba(255,255,255,.15);
+        border-top-color:#2563EB;
+        border-radius:50%;
+        animation:sp-init-spin .65s linear infinite;
+      "></div>
+
+      <style>
+        @keyframes sp-init-spin { to { transform: rotate(360deg); } }
+      </style>
+    </div>
+  </sp-root>
+
+</body>
+</html>
